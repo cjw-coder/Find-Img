@@ -1,0 +1,80 @@
+{
+	"pages": [
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/horizeontal/index",
+			"style": {
+				"navigationBarTitleText": "横屏"
+			}
+		},
+		{
+			"path": "pages/video/index",
+			"style": {
+				"navigationBarTitleText": "精美视频"
+			}
+		},
+		{
+			"path": "pages/search/index",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+		{
+			"path": "pages/mine/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "懂你找图",
+		"navigationBarBackgroundColor": "#000000",
+		"backgroundColor": "#F8F8F8",
+		"enablePullDownRefresh": true
+	},
+	"tabBar":{
+		"color":"#8a8a8a",
+		"selectedColor":"#d81e06",
+		"backgroundColor":"#F8F8F8",
+		"position":"bottom",
+		"borderStyle":"black",
+		"list":[
+			{
+				"pagePath":"pages/home/index",
+				"text":"首页",
+				"iconPath":"./static/icon/home.png",
+				"selectedIconPath":"./static/icon/home_active.png"
+			},
+			{
+				"pagePath":"pages/horizeontal/index",
+				"text":"横屏",
+				"iconPath":"./static/icon/horizeontal.png",
+				"selectedIconPath":"./static/icon/horizeontal_active.png"
+			},
+			{
+				"pagePath":"pages/video/index",
+				"text":"视频",
+				"iconPath":"./static/icon/video.png",
+				"selectedIconPath":"./static/icon/video_active.png"
+			},
+			{
+				"pagePath":"pages/search/index",
+				"text":"搜索",
+				"iconPath":"./static/icon/search.png",
+				"selectedIconPath":"./static/icon/search_active.png"
+			},
+			{
+				"pagePath":"pages/mine/index",
+				"text":"我的",
+				"iconPath":"./static/icon/mine.png",
+				"selectedIconPath":"./static/icon/mine_active.png"
+			}
+		]
+	}
+}

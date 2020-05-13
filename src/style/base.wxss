@@ -1,0 +1,29 @@
+
+view,
+text,
+navigator,
+input,
+image,
+swiper,
+swiper-item,
+scroll-view,
+page {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","MicrosoftrYaHei","微软雅黑",Arial,sans-serif;
+}
+page{
+  font-size: 28rpx;
+  color: #666;
+}
+image{
+  width: 100%;
+  display: block;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
