@@ -15,9 +15,6 @@
                 <home-category></home-category>
               </view>
               <view v-if="current === 2">
-                <home-new></home-new>
-              </view>
-              <view v-if="current === 3">
                 <home-album></home-album>
               </view>
             </view>
@@ -28,7 +25,6 @@
 <script>
 import homeRecommend from './home_recommend'
 import homeCategory from './home_category'
-import homeNew from './home_new'
 import homeAlbum from './home_album'
 
 import {uniSegmentedControl} from '@dcloudio/uni-ui'
@@ -37,7 +33,6 @@ export default {
     components:{
         homeRecommend,
         homeCategory,
-        homeNew,
         homeAlbum,
         uniSegmentedControl
     },
@@ -46,7 +41,6 @@ export default {
         items:[
           {title:"推荐"},
           {title:"分类"},
-          {title:"最新"},
           {title:"专辑"}
         ],
         current:0

@@ -7,21 +7,27 @@
 			}
 		},
 		{
-			"path": "pages/horizeontal/index",
+			"path": "pages/album/index",
 			"style": {
-				"navigationBarTitleText": "横屏"
+				"navigationBarTitleText": "专辑详情"
+			}
+		},
+		{
+			"path": "pages/imgDetail/index",
+			"style": {
+				"navigationBarTitleText": "图片详情"
+			}
+		},
+		{
+			"path": "pages/imgCategory/index",
+			"style": {
+				"navigationBarTitleText": "图片分类"
 			}
 		},
 		{
 			"path": "pages/video/index",
 			"style": {
-				"navigationBarTitleText": "精美视频"
-			}
-		},
-		{
-			"path": "pages/search/index",
-			"style": {
-				"navigationBarTitleText": "搜索"
+				"navigationBarTitleText": "视频"
 			}
 		},
 		{
@@ -52,22 +58,10 @@
 				"selectedIconPath":"./static/icon/home_active.png"
 			},
 			{
-				"pagePath":"pages/horizeontal/index",
-				"text":"横屏",
-				"iconPath":"./static/icon/horizeontal.png",
-				"selectedIconPath":"./static/icon/horizeontal_active.png"
-			},
-			{
 				"pagePath":"pages/video/index",
 				"text":"视频",
 				"iconPath":"./static/icon/video.png",
 				"selectedIconPath":"./static/icon/video_active.png"
-			},
-			{
-				"pagePath":"pages/search/index",
-				"text":"搜索",
-				"iconPath":"./static/icon/search.png",
-				"selectedIconPath":"./static/icon/search_active.png"
 			},
 			{
 				"pagePath":"pages/mine/index",

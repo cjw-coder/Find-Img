@@ -1,8 +1,10 @@
 <template>
   <scroll-view scroll-y @scrolltolower="handleScroll" class="recommend_view" v-if="isShow">
     <view class="recommend_list">
-      <view class="recommend_item" v-for="item in recommend_list" :key="item.index">
-        <image :src="item.thumb" mode="widthFix"></image>
+      <view class="recommend_item" v-for="(item,index) in recommend_list" :key="index">
+        <go-detail :list="recommend_list" :index="index">
+          <image :src="item.thumb" mode="widthFix"></image>
+        </go-detail>
       </view>
     </view>
     <view class="month_list">
@@ -12,16 +14,20 @@
         <view>更多 ></view>
       </view>
       <view class="month_list_content">
-        <view class="month_item" v-for="item in month_list" :key="item.index">
-          <image :src="item.thumb + item.rule.replace('$<Height>',260)" mode="aspectFill"></image>
+        <view class="month_item" v-for="(item,index) in month_list" :key="index">
+          <go-detail :list="month_list" :index="index">
+            <image :src="item.thumb + item.rule.replace('$<Height>',260)" mode="aspectFill"></image>
+          </go-detail>
         </view>
       </view>
     </view>
     <view class="hot_list">
       <view class="hot_list_title">热门</view>
       <view class="hot_list_content">
-        <view class="hot_list_item" v-for="item in hot_list" :key="item.index">
-          <image :src="item.thumb" mode="aspectFill"></image>
+        <view class="hot_list_item" v-for="(item,index) in hot_list" :key="index">
+          <go-detail :list="hot_list" :index="index">
+            <image :src="item.thumb" mode="aspectFill"></image>
+          </go-detail>
         </view>
       </view> 
     </view>
@@ -30,6 +36,7 @@
 
 <script>
 import moment from 'moment'
+import goDetail from '../../../components/go_detail'
 export default {
     name:"home_recommend",
     data(){
@@ -46,6 +53,9 @@ export default {
         },
         hasMore:true
       }
+    },
+    components:{
+      goDetail
     },
     mounted(){
       uni.setNavigationBarTitle({title:"推荐"}),

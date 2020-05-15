@@ -2,12 +2,15 @@
   <scroll-view scroll-y @scrolltolower="handleScroll" class="album_view" v-if="isShow">
     <swiper autoplay indicator-dots circular>
       <swiper-item v-for="item in banner_list" :key="item.index">
-        <image mode="widthFix" :src="item.thumb"></image>
+        <image mode="aspectFill" :src="item.thumb"></image>
       </swiper-item>
     </swiper>
     <view class="album_list">
-      <view class="album_item" v-for="item in album_list" :key="item.index">
-        <image :src="item.cover"></image>
+      <navigator class="album_item" 
+                 :url="`/pages/album/index?id=${item.id}`" 
+                 v-for="item in album_list" 
+                 :key="item.index">
+          <image :src="item.cover"></image> 
         <view class="album_content">
           <text>{{item.name}}</text>
           <view class="album_info">
@@ -15,12 +18,13 @@
             <view class="btn"> + 关注</view>
           </view>
         </view>
-      </view>
+      </navigator>
     </view>
   </scroll-view>
 </template>
 
 <script>
+import goDetail from '../../../components/go_detail'
 export default {
     name:"home_album",
     mounted(){
@@ -35,10 +39,13 @@ export default {
         params:{
           limit:30,
           order:'new',
-          skip:0
+          skip:0,
         },
         hasMore:true
       }
+    },
+    components:{
+      goDetail 
     },
     methods:{
       handleScroll(){
@@ -116,6 +123,7 @@ export default {
         position:absolute;
         right:0;
         bottom:34rpx;
+        text-align: center;
       }
     }
   }
