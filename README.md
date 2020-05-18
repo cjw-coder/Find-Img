@@ -20,6 +20,7 @@
 该项目是一个通过uni-app框架实现Vue.js开发跨平台应用的个人项目，
 后台接口使用了网络提供的接口数据，因此部分页面存在数据丢失的问题。
 前端页面总体较为完善，充分使用了uni-app提供的接口，
-比如showToast和showLoading等提示窗口接口，downloadFile,saveImageToPhotosAlbum,saveVideoToPhotosAlbum下载文件和存储文件接口，同时内部也使用了诸如scroll，swiper等uni-app内置组件。
+比如showToast和showLoading等提示窗口接口，downloadFile相关的下载和存储文件接口,
+同时内部也使用了诸如scroll，swiper等uni-app内置组件。
 在具有vue框架和微信小程序开发的基础前提下，使用uni-app面对跨平台应用开发是非常方便的。
 ```
