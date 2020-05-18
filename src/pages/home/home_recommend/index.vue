@@ -2,9 +2,7 @@
   <scroll-view scroll-y @scrolltolower="handleScroll" class="recommend_view" v-if="isShow">
     <view class="recommend_list">
       <view class="recommend_item" v-for="(item,index) in recommend_list" :key="index">
-        <go-detail :list="recommend_list" :index="index">
-          <image :src="item.thumb" mode="widthFix"></image>
-        </go-detail>
+        <image :src="item.thumb" mode="widthFix"></image>
       </view>
     </view>
     <view class="month_list">
@@ -68,6 +66,7 @@ export default {
     },
     methods:{
       getList(){
+        uni.showLoading({title:"加载中..."})
         this.request({
           url:'http://157.122.54.189:9088/image/v3/homepage/vertical',
           data:this.params
@@ -85,6 +84,7 @@ export default {
             this.isShow = true
           }
           this.hot_list = [...this.hot_list,...result.vertical]
+          uni.hideLoading()
         })
       },
       handleScroll(){

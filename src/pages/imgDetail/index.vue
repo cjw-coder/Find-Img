@@ -1,5 +1,5 @@
 <template>
-    <view>
+    <view class="img_detail">
         <view class="user_info">
             <image src="/static/icon/user.png" mode="aspectFill"></image>
             <view>
@@ -139,99 +139,102 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .user_info{
-        display: flex;
-        height:100rpx;
-        margin:30rpx;
-        image{
-            border-radius: 100%;
-            height:100%;
-            flex:1;
+    .img_detail{
+        padding-bottom:100rpx;
+        .user_info{
+            display: flex;
+            height:100rpx;
+            margin:30rpx;
+            image{
+                border-radius: 100%;
+                height:100%;
+                flex:1;
+            }
+            view{
+                flex:6;
+                padding:20rpx 20rpx 0 20rpx;
+                display: flex;
+                flex-direction: column;
+                text:last-child{
+                    color:rgba(125,125,125,0.5)
+                }
+            }
         }
-        view{
-            flex:6;
-            padding:20rpx 20rpx 0 20rpx;
+        .user_rank{
+            display: flex;
+            text{
+                flex:1;
+                text-align: center;
+                line-height:100rpx;
+            }
+        }
+        .about{
+            padding:20rpx;
+            border-top:2rpx solid rgba(125,125,125,0.2);
+            border-bottom:2rpx solid rgba(125,125,125,0.2);
+            .about_content{
+                display: flex;
+                justify-content: space-around;
+                padding:10rpx;
+                image{
+                    flex:1;
+                }
+                view{
+                    flex:2;
+                    display: flex;
+                    flex-direction: column;
+                    padding:10rpx 20rpx;
+                    view{
+                        background:#fa9e8c;
+                        color:#fff;
+                        width:80rpx;
+                        padding:5rpx;
+                        float:right;
+                        flex:1;
+                        text-align:center;
+                    }
+                    text{
+                        flex:2
+                    }
+                }
+            }
+        }
+        .comment_list{
             display: flex;
             flex-direction: column;
-            text:last-child{
-                color:rgba(125,125,125,0.5)
-            }
-        }
-    }
-    .user_rank{
-        display: flex;
-        text{
-            flex:1;
-            text-align: center;
-            line-height:100rpx;
-        }
-    }
-    .about{
-        padding:20rpx;
-        border-top:2rpx solid rgba(125,125,125,0.2);
-        border-bottom:2rpx solid rgba(125,125,125,0.2);
-        .about_content{
-            display: flex;
             justify-content: space-around;
-            padding:10rpx;
-            image{
-                flex:1;
-            }
+            border-top:2rpx solid rgba(125,125,125,0.2);
             view{
-                flex:2;
                 display: flex;
-                flex-direction: column;
-                padding:10rpx 20rpx;
-                view{
-                    background:#fa9e8c;
-                    color:#fff;
-                    width:80rpx;
-                    padding:5rpx;
-                    float:right;
+                padding:20rpx;
+                image{
                     flex:1;
-                    text-align:center;
                 }
-                text{
-                    flex:2
+                view{
+                    flex:7;
+                    padding:5rpx 20rpx;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color:rgba(125,125,125,0.8);
                 }
             }
+            .comment{
+                padding-left:115rpx;
+                font-weight: bold;
+                line-height:65rpx;
+            }
         }
-    }
-    .comment_list{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        border-top:2rpx solid rgba(125,125,125,0.2);
-        view{
-            display: flex;
+        .download_bar{
+            position:fixed;
+            bottom:0;
+            background:#fa9e8c;
             padding:20rpx;
-            image{
-                flex:1;
-            }
-            view{
-                flex:7;
-                padding:5rpx 20rpx;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                color:rgba(125,125,125,0.8);
-            }
-        }
-        .comment{
-            padding-left:115rpx;
-            font-weight: bold;
-            line-height:65rpx;
-        }
-    }
-    .download_bar{
-        position:fixed;
-        bottom:0;
-        background:#fa9e8c;
-        padding:20rpx;
-        border:10rpx solid #fff;
-        width:100%;
-        color:#fff;
-        text-align: center;
+            border:10rpx solid #fff;
+            width:100%;
+            color:#fff;
+            text-align: center;
 
+        }
     }
 </style>

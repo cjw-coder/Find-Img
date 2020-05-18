@@ -3,7 +3,19 @@
 		{
 			"path": "pages/home/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "搜图一下"
+			}
+		},
+		{
+			"path": "pages/video/index",
+			"style": {
+				"navigationBarTitleText": "视频"
+			}
+		},
+		{
+			"path": "pages/videoPlay/index",
+			"style": {
+				"navigationBarTitleText": "视频详情"
 			}
 		},
 		{
@@ -22,18 +34,6 @@
 			"path": "pages/imgCategory/index",
 			"style": {
 				"navigationBarTitleText": "图片分类"
-			}
-		},
-		{
-			"path": "pages/video/index",
-			"style": {
-				"navigationBarTitleText": "视频"
-			}
-		},
-		{
-			"path": "pages/mine/index",
-			"style": {
-				"navigationBarTitleText": "我的"
 			}
 		}
 	],
@@ -62,12 +62,6 @@
 				"text":"视频",
 				"iconPath":"./static/icon/video.png",
 				"selectedIconPath":"./static/icon/video_active.png"
-			},
-			{
-				"pagePath":"pages/mine/index",
-				"text":"我的",
-				"iconPath":"./static/icon/mine.png",
-				"selectedIconPath":"./static/icon/mine_active.png"
 			}
 		]
 	}
